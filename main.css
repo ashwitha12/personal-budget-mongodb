@@ -94,7 +94,6 @@ div.hero h2 {
 
 .skip-link {
     position: absolute;
-    background-color: #000;
     z-index: 9999;
     text-decoration: none;
     opacity: 0.9;
