@@ -1,7 +1,7 @@
 {
     "myBudget": [
         {
-            "title": "Gas",
+            "title": "Eat out",
             "budget": 10
         },
         {
@@ -13,11 +13,11 @@
             "budget": 10
         },
         {
-            "title": "Eat out",
+            "title": "Gas",
             "budget": 15
         },
         {
-            "title": "Entertainment",
+            "title": "Savings",
             "budget": 15
         },
         {
@@ -25,7 +25,7 @@
             "budget": 15
         },
         {
-            "title": "Savings",
+            "title": "Entertainment",
             "budget": 15
         }
     ]
