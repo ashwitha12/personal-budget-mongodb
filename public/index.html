@@ -133,18 +133,8 @@
         var dataSource = {
             datasets:[
                 {
-                    data: [30,350,90],
-                    backgroundColor: [
-                        '#ffcd56',
-                        '#ff6384',
-                        '#36a2eb',
-                        '#fd6b19',
-                        '#00ff00',
-                        '#0000ff',
-                        '#ff0000'
-                        
-                        
-                    ],
+                    data: [],
+                    backgroundColor: [],
                 }
             ],
             labels:  []
@@ -176,10 +166,12 @@
             axios.get('http://localhost:3000/budget')
             .then(function(res) {
                 console.log(res.data);
-                for (var i=0;i<res.data.myBudget.length; i++)
+                for (var i=0;i<res.data.length; i++)
                 {
-                    dataSource.datasets[0].data[i]=res.data.myBudget[i].budget;
-                    dataSource.labels[i]=res.data.myBudget[i].title;
+                    dataSource.datasets[0].data[i]=res.data[i].budget;
+                    dataSource.labels[i]=res.data[i].title;
+ 
+                    dataSource.datasets[0].backgroundColor[i] = res.data[i].color;
                 } 
             })
                 .then(function () {
@@ -201,7 +193,7 @@
     function getBudgetAgain() {
         axios.get('http://localhost:3000/budget')
             .then(function (res) {
-                datum = res.data.myBudget;
+                datum = res.data;
                 console.log(datum);
             })
             .then(function () {
