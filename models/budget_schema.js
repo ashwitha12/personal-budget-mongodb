@@ -4,6 +4,7 @@ const  budgetSchema = new mongoose.Schema({
     title: {
         type: String,
         required: true,
+        
     },
     budget: {
         type: Number,

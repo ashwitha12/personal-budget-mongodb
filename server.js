@@ -39,7 +39,7 @@ mongoose.connect(url, { useNewUrlParser: true, useUnifiedTopology: true })
 })
 });
 
-app.post("/insertBudget", (req, res) => {
+app.post('/Budget', (req, res) => {
 
     mongoose.connect(url, { useNewUrlParser: true, useUnifiedTopology: true })
         .then(() => {
